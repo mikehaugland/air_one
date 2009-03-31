@@ -23,8 +23,50 @@
  ******************************************************************************/
 package com.appsbymike.airone.controllers
 {
-	public class UpdateController
+	import air.update.ApplicationUpdaterUI;
+	import air.update.events.UpdateEvent;
+
+	import com.appsbymike.airone.Ao;
+	import com.appsbymike.airone.events.UpdateErrorEvent;
+
+	import flash.events.ErrorEvent;
+	import flash.events.EventDispatcher;
+	import flash.filesystem.File;
+
+	public class UpdateController extends EventDispatcher
 	{
-		public function UpdateController() {}
+		private var _updater:ApplicationUpdaterUI = new ApplicationUpdaterUI();
+
+		/**
+		 * Check for an update.
+		 */
+		public function checkForUpdate():void
+		{
+			_updater.checkNow();
+		}
+
+		/**
+		 * Event handler for errors. Dispatches updateErrorEvent.
+		 */
+		private function updateError( e:ErrorEvent ):void
+		{
+			dispatchEvent( new UpdateErrorEvent( e.text ) );
+		}
+
+		/**
+		 * Checks for an update request is initialized.
+		 */
+		private function updateInitialized( e:UpdateEvent ):void
+		{
+			_updater.checkNow();
+		}
+
+		public function UpdateController() {
+			super();
+			_updater.configurationFile = new File( Ao.updateConfigFile );
+			_updater.addEventListener( UpdateEvent.INITIALIZED, updateInitialized );
+			_updater.addEventListener( ErrorEvent.ERROR, updateError );
+			_updater.initialize();
+		}
 	}
 }

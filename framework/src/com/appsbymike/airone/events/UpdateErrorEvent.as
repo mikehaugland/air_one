@@ -21,41 +21,25 @@
  *
  * Redistributions of files must retain the above copyright notice.
  ******************************************************************************/
-package com.appsbymike.airone
+package com.appsbymike.airone.events
 {
-	import com.appsbymike.airone.controllers.SettingController;
-	import com.appsbymike.airone.controllers.UpdateController;
-	import com.appsbymike.airone.controllers.WindowController;
-	
-	[Bindable]
-	public class Ao
+	import flash.events.Event;
+
+	/**
+	 * Dispatched after an update error occurs.
+	 */
+	public class UpdateErrorEvent extends Event
 	{
-		/** Update file path */
-		public static var updateConfigFile:String = 'app:/config/update.xml';
+		/** Event identifier */
+		public static var ID:String = "updateError";
 
-		/** Name of database to connect to */
-		public static var databaseName:String = 'aodb.db';
+		/** Text describing update error. */
+		public var text:String; 
 
-		/** Provides methods to manipulate the window. */
-		public static var window:WindowController;
-
-		/** Provides access to setting and retrieving settings. */
-		public static var settings:SettingController;
-
-		/** Provides access to an update manager. */
-		public static var update:UpdateController;
-
-		/**
-		 * Initializes all of the controllers.
-		 */
-		public static function init():void
+		public function UpdateErrorEvent( text:String )
 		{
-			window = new WindowController();
-			settings = new SettingController();
-			update = new UpdateController();
+			super( ID, false, false );
+			this.text = text;
 		}
-
-		public function Ao( locker:Lock ) {}
 	}
 }
-class Lock {}
