@@ -29,6 +29,12 @@ package com.appsbymike.airone
 	[Bindable]
 	public class Ao
 	{
+		/** URL to update.xml file */
+		public static var updateUrl:String;
+
+		/** Name of database to connect to */
+		public static var databaseName:String = 'aodb.db';
+
 		/** Provides methods to manipulate the window. */
 		public static var window:WindowController = new WindowController();
 

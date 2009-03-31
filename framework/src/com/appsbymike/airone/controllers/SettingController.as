@@ -28,14 +28,15 @@ package com.appsbymike.airone.controllers
 	import flash.data.SQLResult;
 	import flash.data.SQLStatement;
 	import flash.filesystem.File;
-	
+	import com.appsbymike.airone.Ao;
+
 	public class SettingController
 	{
 		private var _connection:SQLConnection;
 
 		public function SettingController()
 		{
-			var database:File = File.applicationStorageDirectory.resolvePath( "ao_settings.db" );
+			var database:File = File.applicationStorageDirectory.resolvePath( Ao.databaseName );
 			// Set the connection
 			_connection = new SQLConnection();
 			_connection.open( database, SQLMode.CREATE )
@@ -51,7 +52,11 @@ package com.appsbymike.airone.controllers
 			tableQuery.execute();
 		}
 
-		/** Load a setting */
+		/**
+		 * Load a setting 
+		 * 
+		 * @param name name of setting you want to retrieve value of.
+		 */
 		public function fetch( name:String ):String
 		{
 			var fetchQuery:SQLStatement = new SQLStatement();
@@ -67,7 +72,12 @@ package com.appsbymike.airone.controllers
 			return null;
 		}
 
-		/** set a setting */
+		/**
+		 * Set a setting
+		 * 
+		 * @param name Name of the setting you want to store.
+		 * @param value Value of the setting you want to store.
+		 */
 		public function store( name:String, value:String ):void
 		{
 			var storeQuery:SQLStatement = new SQLStatement();
@@ -78,7 +88,11 @@ package com.appsbymike.airone.controllers
 			storeQuery.execute();
 		}
 
-		/** remove a setting */
+		/**
+		 * Remove a setting
+		 * 
+		 * @param name Name of the setting you want to remove.
+		 */
 		public function remove( name:String ):void
 		{
 			var removeQuery:SQLStatement = new SQLStatement();
