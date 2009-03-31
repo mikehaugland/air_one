@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <flexLibProperties version="1">
 <includeClasses>
-<classEntry path="com.appsbymike.airone.controllers.UpdateController"/>
 <classEntry path="com.appsbymike.airone.Ao"/>
+<classEntry path="com.appsbymike.airone.controllers.SettingController"/>
+<classEntry path="com.appsbymike.airone.controllers.UpdateController"/>
+<classEntry path="com.appsbymike.airone.controllers.WindowController"/>
 </includeClasses>
 <includeResources/>
 <namespaceManifests/>
