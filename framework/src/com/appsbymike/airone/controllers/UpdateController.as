@@ -33,6 +33,11 @@ package com.appsbymike.airone.controllers
 	import flash.events.EventDispatcher;
 	import flash.filesystem.File;
 
+	/**
+	 * Provides methods to update the application.
+	 * 
+	 * More info: http://help.adobe.com/en_US/AIR/1.5/devappsflex/WS5b3ccc516d4fbf351e63e3d118666ade46-7ff2.html
+	 */
 	public class UpdateController extends EventDispatcher
 	{
 		private var _updater:ApplicationUpdaterUI = new ApplicationUpdaterUI();

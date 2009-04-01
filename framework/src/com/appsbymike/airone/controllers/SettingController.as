@@ -30,6 +30,9 @@ package com.appsbymike.airone.controllers
 	import flash.filesystem.File;
 	import com.appsbymike.airone.Ao;
 
+	/**
+	 * Settings controller.
+	 */
 	public class SettingController
 	{
 		private var _connection:SQLConnection;

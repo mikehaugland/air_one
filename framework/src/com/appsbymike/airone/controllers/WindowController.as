@@ -33,13 +33,25 @@ package com.appsbymike.airone.controllers
 	 */
 	public class WindowController
 	{
-		/** Default X position (distance from left of screen) */
+		/**
+		 * Default X position (distance from left of screen)
+		 * @default 50
+		 */
 		private static var defaultX:int = 50;
-		/** Default Y position (distance from top of screen) */
+		/**
+		 * Default Y position (distance from top of screen)
+		 * @default 50
+		 */
 		private static var defaultY:int = 50;
-		/** Default application height */
+		/**
+		 * Default application height
+		 * @default 680
+		 */
 		private static var defaultHeight:uint = 680;
-		/** Default application width */
+		/**
+		 * Default application width
+		 * @default 980
+		 */
 		private static var defaultWidth:uint = 980;
 
 		public function WindowController() {}
@@ -60,8 +72,6 @@ package com.appsbymike.airone.controllers
 		 * Clears the users settings for window size and dimensions.
 		 * 
 		 * @param forceUpdate runs loadWindowSettingOrDefault after clearing (default is <code>true</code>)
-		 * 
-		 * @see loadWindowSettingsOrDefault
 		 */
 		public function clearSavedSettings( forceUpdate:Boolean=true ):void {
 			Ao.settings.remove( 'userY' );
@@ -94,7 +104,7 @@ package com.appsbymike.airone.controllers
 		/**
 		 * Sets the window to fill screen (maximize).
 		 */
-		private function sizeToFit():void {
+		public function sizeToFit():void {
 			var window:NativeWindow = NativeApplication.nativeApplication.openedWindows[0];
 			window.maximize();
 		}

@@ -51,7 +51,9 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#databaseName">databaseName</a> : String = "aodb.db"<div class="summaryTableDescription">[static] Name of database to connect to </div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#databaseName">databaseName</a> : String = "aodb.db"<div class="summaryTableDescription">[static]
+   Name of database to connect to
+   </div>
 </td><td class="summaryTableOwnerCol">Ao</td>
 </tr>
 <tr class="">
@@ -61,11 +63,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#update">update</a> : <a href="controllers/UpdateController.html">UpdateController</a>
-<div class="summaryTableDescription">[static] Provides access to an update manager.</div>
+<div class="summaryTableDescription">[static]
+   Provides access to an update manager.</div>
 </td><td class="summaryTableOwnerCol">Ao</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#updateConfigFile">updateConfigFile</a> : String = "app:/config/update.xml"<div class="summaryTableDescription">[static] Update file path </div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#updateConfigFile">updateConfigFile</a> : String = "app:/config/update.xml"<div class="summaryTableDescription">[static]
+   Update file path
+   </div>
 </td><td class="summaryTableOwnerCol">Ao</td>
 </tr>
 <tr class="">
@@ -94,7 +99,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#init()">init</a>():void</div>
 <div class="summaryTableDescription">[static]
-   Initializes all of the controllers.</div>
+   Initializes controllers.</div>
 </td><td class="summaryTableOwnerCol">Ao</td>
 </tr>
 </table>
@@ -113,7 +118,10 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static var databaseName:String = "aodb.db"</code><p> Name of database to connect to </p></div>
+<code>public static var databaseName:String = "aodb.db"</code><p>
+   Name of database to connect to
+   </p><p>The default value is <code>aodb.db</code>.</p>
+</div>
 <a name="settings"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -129,7 +137,11 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static var update:<a href="controllers/UpdateController.html">UpdateController</a></code><p> Provides access to an update manager. </p></div>
+<code>public static var update:<a href="controllers/UpdateController.html">UpdateController</a></code><p>
+   Provides access to an update manager.
+   
+   More info: http://help.adobe.com/en_US/AIR/1.5/devappsflex/WS5b3ccc516d4fbf351e63e3d118666ade46-7ff2.html
+   </p></div>
 <a name="updateConfigFile"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -137,7 +149,10 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static var updateConfigFile:String = "app:/config/update.xml"</code><p> Update file path </p></div>
+<code>public static var updateConfigFile:String = "app:/config/update.xml"</code><p>
+   Update file path
+   </p><p>The default value is <code>app:/config/update.xml</code>.</p>
+</div>
 <a name="window"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -172,7 +187,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static function init():void</code><p>
-   Initializes all of the controllers.
+   Initializes controllers.
    </p></div>
 <br>
 <br>

@@ -30,10 +30,16 @@ package com.appsbymike.airone
 	[Bindable]
 	public class Ao
 	{
-		/** Update file path */
+		/**
+		 * Update file path
+		 * @default app:/config/update.xml
+		 */
 		public static var updateConfigFile:String = 'app:/config/update.xml';
 
-		/** Name of database to connect to */
+		/**
+		 * Name of database to connect to
+		 * @default aodb.db
+		 */
 		public static var databaseName:String = 'aodb.db';
 
 		/** Provides methods to manipulate the window. */
@@ -42,11 +48,15 @@ package com.appsbymike.airone
 		/** Provides access to setting and retrieving settings. */
 		public static var settings:SettingController;
 
-		/** Provides access to an update manager. */
+		/**
+		 * Provides access to an update manager.
+		 * 
+		 * More info: http://help.adobe.com/en_US/AIR/1.5/devappsflex/WS5b3ccc516d4fbf351e63e3d118666ade46-7ff2.html
+		 */
 		public static var update:UpdateController;
 
 		/**
-		 * Initializes all of the controllers.
+		 * Initializes controllers.
 		 */
 		public static function init():void
 		{
