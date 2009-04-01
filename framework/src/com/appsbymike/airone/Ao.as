@@ -32,13 +32,13 @@ package com.appsbymike.airone
 	{
 		/**
 		 * Update file path
-		 * @default app:/config/update.xml
+		 * @default "app:/config/update.xml"
 		 */
 		public static var updateConfigFile:String = 'app:/config/update.xml';
 
 		/**
 		 * Name of database to connect to
-		 * @default aodb.db
+		 * @default "aodb.db"
 		 */
 		public static var databaseName:String = 'aodb.db';
 
@@ -51,7 +51,9 @@ package com.appsbymike.airone
 		/**
 		 * Provides access to an update manager.
 		 * 
-		 * More info: http://help.adobe.com/en_US/AIR/1.5/devappsflex/WS5b3ccc516d4fbf351e63e3d118666ade46-7ff2.html
+		 * <p>More info: <a href="http://help.adobe.com/en_US/AIR/1.5/devappsflex/WS5b3ccc516d4fbf351e63e3d118666ade46-7ff2.html">
+		 * http://help.adobe.com/en_US/AIR/1.5/devappsflex/WS5b3ccc516d4fbf351e63e3d118666ade46-7ff2.html
+		 * </a></p>
 		 */
 		public static var update:UpdateController;
 

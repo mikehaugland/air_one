@@ -36,7 +36,9 @@ package com.appsbymike.airone.controllers
 	/**
 	 * Provides methods to update the application.
 	 * 
-	 * More info: http://help.adobe.com/en_US/AIR/1.5/devappsflex/WS5b3ccc516d4fbf351e63e3d118666ade46-7ff2.html
+	 * <p>More info: <a href="http://help.adobe.com/en_US/AIR/1.5/devappsflex/WS5b3ccc516d4fbf351e63e3d118666ade46-7ff2.html">
+	 * http://help.adobe.com/en_US/AIR/1.5/devappsflex/WS5b3ccc516d4fbf351e63e3d118666ade46-7ff2.html
+	 * </a></p>
 	 */
 	public class UpdateController extends EventDispatcher
 	{
