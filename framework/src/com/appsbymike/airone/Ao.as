@@ -23,6 +23,7 @@
  ******************************************************************************/
 package com.appsbymike.airone
 {
+	import com.appsbymike.airone.controllers.NetworkMonitorController;
 	import com.appsbymike.airone.controllers.SettingController;
 	import com.appsbymike.airone.controllers.UpdateController;
 	import com.appsbymike.airone.controllers.WindowController;
@@ -42,6 +43,17 @@ package com.appsbymike.airone
 		 */
 		public static var databaseName:String = 'aodb.db';
 
+		/**
+		 * URL to monitor for connection. Must be a domain.
+		 * @example <code>monitorDomain = 'google.com';</code>
+		 */
+		public static var monitorDomain:String;
+		/**
+		 * Port to monitor for connection.
+		 * @default 80
+		 */
+		public static var monitorPort:uint = 80;
+
 		/** Provides methods to manipulate the window. */
 		public static var window:WindowController;
 
@@ -57,6 +69,9 @@ package com.appsbymike.airone
 		 */
 		public static var update:UpdateController;
 
+		/** Provides access to a network monitor. */
+		public static var networkMonitor:NetworkMonitorController;
+
 		/**
 		 * Initializes controllers.
 		 */
@@ -65,6 +80,7 @@ package com.appsbymike.airone
 			window = new WindowController();
 			settings = new SettingController();
 			update = new UpdateController();
+			networkMonitor = new NetworkMonitorController();
 		}
 
 		public function Ao( locker:Lock ) {}

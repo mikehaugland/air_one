@@ -4,6 +4,8 @@
 <classEntry path="com.appsbymike.airone.controllers.WindowController"/>
 <classEntry path="com.appsbymike.airone.controllers.SettingController"/>
 <classEntry path="com.appsbymike.airone.events.UpdateErrorEvent"/>
+<classEntry path="com.appsbymike.airone.controllers.NetworkMonitorController"/>
+<classEntry path="com.appsbymike.airone.events.NetworkStatusChangeEvent"/>
 <classEntry path="com.appsbymike.airone.controllers.UpdateController"/>
 <classEntry path="com.appsbymike.airone.Ao"/>
 </includeClasses>
