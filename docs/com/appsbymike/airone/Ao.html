@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../../print.css" type="text/css" media="print">
-<meta content="Ao,com.appsbymike.airone.Ao,databaseName,settings,update,updateConfigFile,window,init" name="keywords">
+<meta content="Ao,com.appsbymike.airone.Ao,databaseName,monitorDomain,monitorPort,networkMonitor,settings,update,updateConfigFile,window,init" name="keywords">
 <title>com.appsbymike.airone.Ao</title>
 </head>
 <body>
@@ -54,6 +54,21 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#databaseName">databaseName</a> : String = "aodb.db"<div class="summaryTableDescription">[static]
    Name of database to connect to
    </div>
+</td><td class="summaryTableOwnerCol">Ao</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#monitorDomain">monitorDomain</a> : String<div class="summaryTableDescription">[static]
+   URL to monitor for connection.</div>
+</td><td class="summaryTableOwnerCol">Ao</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#monitorPort">monitorPort</a> : uint = 80<div class="summaryTableDescription">[static]
+   Port to monitor for connection.</div>
+</td><td class="summaryTableOwnerCol">Ao</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#networkMonitor">networkMonitor</a> : <a href="controllers/NetworkMonitorController.html">NetworkMonitorController</a>
+<div class="summaryTableDescription">[static] Provides access to a network monitor.</div>
 </td><td class="summaryTableOwnerCol">Ao</td>
 </tr>
 <tr class="">
@@ -122,6 +137,39 @@ showHideInherited();
    Name of database to connect to
    </p><p>The default value is <code>"aodb.db"</code>.</p>
 </div>
+<a name="monitorDomain"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">monitorDomain</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static var monitorDomain:String</code><p>
+   URL to monitor for connection. Must be a domain.
+   </p><br>
+<span class="label">Example</span>
+<br><code>monitorDomain = 'google.com';</code>
+   <p></p>
+</div>
+<a name="monitorPort"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">monitorPort</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static var monitorPort:uint = 80</code><p>
+   Port to monitor for connection.
+   </p><p>The default value is <code>80</code>.</p>
+</div>
+<a name="networkMonitor"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">networkMonitor</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static var networkMonitor:<a href="controllers/NetworkMonitorController.html">NetworkMonitorController</a></code><p> Provides access to a network monitor. </p></div>
 <a name="settings"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>

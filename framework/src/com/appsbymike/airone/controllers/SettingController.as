@@ -59,6 +59,7 @@ package com.appsbymike.airone.controllers
 		 * Load a setting 
 		 * 
 		 * @param name name of setting you want to retrieve value of.
+		 * @return A string containing the value of the setting.
 		 */
 		public function fetch( name:String ):String
 		{
