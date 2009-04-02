@@ -31,14 +31,14 @@ package com.appsbymike.airone.events
 	public class UpdateErrorEvent extends Event
 	{
 		/** Event identifier */
-		public static var ID:String = "updateError";
+		public static var UPDATE_ERROR:String = "updateError";
 
 		/** Text describing update error. */
 		public var text:String; 
 
-		public function UpdateErrorEvent( text:String )
+		public function UpdateErrorEvent( type:String, text:String, bubbles:Boolean=false, cancelable:Boolean=false )
 		{
-			super( ID, false, false );
+			super( type, bubbles, cancelable );
 			this.text = text;
 		}
 	}

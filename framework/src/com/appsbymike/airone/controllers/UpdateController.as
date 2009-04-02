@@ -57,7 +57,7 @@ package com.appsbymike.airone.controllers
 		 */
 		private function updateError( e:ErrorEvent ):void
 		{
-			dispatchEvent( new UpdateErrorEvent( e.text ) );
+			dispatchEvent( new UpdateErrorEvent( UpdateErrorEvent.UPDATE_ERROR, e.text ) );
 		}
 
 		/**
