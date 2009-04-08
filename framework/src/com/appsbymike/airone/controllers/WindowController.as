@@ -69,6 +69,18 @@ package com.appsbymike.airone.controllers
 		}
 
 		/**
+		 * Saves the current window size and position.
+		 */
+		public function saveWindowSettings():void
+		{
+			var window:NativeWindow = NativeApplication.nativeApplication.openedWindows[0];
+			Ao.settings.store( 'userY', String(window.y) );
+			Ao.settings.store( 'userX', String(window.x) );
+			Ao.settings.store( 'userWidth', String(window.width) );
+			Ao.settings.store( 'userHeight', String(window.height) );
+		}
+
+		/**
 		 * Clears the users settings for window size and dimensions.
 		 * 
 		 * @param forceUpdate runs loadWindowSettingOrDefault after clearing (default is <code>true</code>)

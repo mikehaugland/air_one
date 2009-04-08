@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
-<meta content="WindowController,com.appsbymike.airone.controllers.WindowController,position,clearSavedSettings,loadWindowSettingsOrDefault,sizeToFit" name="keywords">
+<meta content="WindowController,com.appsbymike.airone.controllers.WindowController,position,clearSavedSettings,loadWindowSettingsOrDefault,saveWindowSettings,sizeToFit" name="keywords">
 <title>com.appsbymike.airone.controllers.WindowController</title>
 </head>
 <body>
@@ -94,6 +94,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
+<a class="signatureLink" href="#saveWindowSettings()">saveWindowSettings</a>():void</div>
+<div class="summaryTableDescription">
+   Saves the current window size and position.</div>
+</td><td class="summaryTableOwnerCol">WindowController</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
 <a class="signatureLink" href="#sizeToFit()">sizeToFit</a>():void</div>
 <div class="summaryTableDescription">
    Sets the window to fill screen (maximize).</div>
@@ -164,6 +172,16 @@ showHideInherited();
 <code>public function loadWindowSettingsOrDefault():void</code><p>
    Sets the position and dimensions of the window based on user
    setting or the default settings.
+   </p></div>
+<a name="saveWindowSettings()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">saveWindowSettings</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function saveWindowSettings():void</code><p>
+   Saves the current window size and position.
    </p></div>
 <a name="sizeToFit()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
